@@ -1,0 +1,43 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+var objPeople=[
+    {
+        username:"sam",
+        password:"sam7886*"
+    },
+    {
+        username:"ram",
+        password:"ram7886*"
+    },
+    {
+        username:"som",
+        password:"som7886*"
+    }
+]
+
+function getInfo(){
+    var username=document.getElementById("username").value
+    var password=document.getElementById("passsword").value
+
+    for(i=0;i<objPeople.length;i++){
+        if(username == objPeople[i].username && password== objPeople[i].password){
+            swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success",
+                button: "Aww yiss!",
+              });
+          
+            return
+        }
+        else{
+            swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success",
+                button: "Aww yiss!",
+              });
+        }
+    }
+  
+}
+
