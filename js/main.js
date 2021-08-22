@@ -1,4 +1,3 @@
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 var objPeople=[
     {
         username:"sam",
@@ -16,13 +15,13 @@ var objPeople=[
 
 function getInfo(){
     var username=document.getElementById("username").value
-    var password=document.getElementById("passsword").value
+    var password=document.getElementById("password").value
 
     for(i=0;i<objPeople.length;i++){
         if(username == objPeople[i].username && password== objPeople[i].password){
             swal({
                 title: "Good job!",
-                text: "You clicked the button!",
+                text: "Successfully logged in",
                 icon: "success",
                 button: "Aww yiss!",
               });
@@ -30,9 +29,10 @@ function getInfo(){
             return
         }
         else{
+            console.log("Incorrect usename or password")
             swal({
                 title: "Good job!",
-                text: "You clicked the button!",
+                text: "Incorrect",
                 icon: "success",
                 button: "Aww yiss!",
               });
